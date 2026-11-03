@@ -1,0 +1,112 @@
+/* ==========================================================================
+   Color Palette Variables
+   Colors used: White, Deep Purple, Electric Blue, Charcoal Black, Light Green
+   ========================================================================== */
+:root {
+    --bg-white: #ffffff;
+    --bg-light: #f8fafc;
+    --deep-purple: #2d1b4e;
+    --electric-blue: #3b82f6;
+    --light-green: #10b981;
+    --charcoal-black: #0f172a;
+    --text-dark: #1e293b;
+    --text-muted: #64748b;
+    --border-color: #e2e8f0;
+    --font-primary: 'Inter', system-ui, -apple-system, sans-serif;
+    --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+body {
+    font-family: var(--font-primary);
+    background-color: var(--bg-light);
+    color: var(--text-dark);
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+nav {
+    background-color: var(--deep-purple);
+    color: var(--bg-white);
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+    gap: 1.5rem;
+}
+
+nav ul li {
+    margin: 0;
+    display: flex;
+    align-items: center;
+}
+
+nav ul li a {
+    color: var(--bg-white);
+    text-decoration: none;
+    font-weight: 500;
+    transition: var(--transition);
+}
+
+nav ul li a:hover {
+    color: var(--electric-blue);
+}
+
+nav .logo {
+    height: 4rem;
+    width: auto;
+    border-radius: 0.5rem;
+    object-fit: contain;
+}
+
+main {
+    flex: 1;
+    padding: 3rem 2rem;
+    background-image: linear-gradient(rgba(255, 255, 255, 0.85), rgba(248, 250, 252, 0.85)), url('../media/background.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.booking-form input,
+.booking-form select,
+.booking-form textarea {
+    width: 100%;
+    padding: 0.75rem 1rem;
+    border: 1px solid #cbd5e1;
+    border-radius: 8px;
+    font-family: inherit;
+    font-size: 0.95rem;
+    background-color: #f8fafc;
+    color: #1e293b;
+    transition: all 0.3s ease;
+    }
+.booking-form input:focus, 
+.booking-form select:focus, 
+.booking-form textarea:focus {
+    outline: none;
+    border-color: #3b82f6;
+    background-color: #ffffff;
+    box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.15);
+}
+@media (max-width: 768px) {
+    .form-grid {
+        grid-template-columns: 1fr !important;
+    }
+    .form-group {
+        grid-column: span 1 !important;
+    }
+}
